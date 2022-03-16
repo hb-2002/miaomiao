@@ -1,0 +1,3 @@
+/* pages/editUserInfo/weixin/weixin.wxss */
+
+input{border:1px #bfbfbf solid;}

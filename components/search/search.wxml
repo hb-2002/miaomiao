@@ -1,0 +1,19 @@
+<!--components/search/search.wxml-->
+
+<view class="{{isFocus?'containerFocus':'container'}}">
+
+<view class="search">
+  <view class="search-text">
+    <text class="iconfont icon-sousuo1"></text>
+    <input type="text" placeholder="搜索中..." bindfocus="handleFocus" bindconfirm="handleConfirm" confirm-type="search"/>
+  </view>
+  <view wx:if="{{isFocus}}" class="search-cancel" bindtap="handleCancel">取消</view>
+</view>
+<view class="search-history">
+  <text>历史记录</text>
+  <text bindtap="handleHistoryDelete" class="iconfont icon-ashbin"></text>
+</view>
+<view class="search-history-btn">
+  <text wx:for="{{historyList}}" wx:key="{{index}}">{{item}}</text>
+</view>
+</view>

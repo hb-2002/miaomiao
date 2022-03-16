@@ -1,0 +1,43 @@
+<!--pages/index/index.wxml-->
+
+<view class="index">
+  <swiper class="index-swiper" indicator-dots="{{true}}"
+        autoplay="{{true}}" circular="{{true}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+      
+      <view class="index-tab">
+        <view class="active">文章报道</view>
+      </view>
+
+      <view class="index-list">
+        <view class="index-list-item">
+        <image src="http://hn.people.com.cn/NMediaFile/2021/1118/LOCAL202111181428000221651756742.jpg"/>
+          <text class="index-list-text">
+            <view class="start-container" bindtap="go">
+              <text class="start">某地区1乡村情况</text>
+            </view>
+          </text>
+        </view>
+        <view class="index-list-item">
+        <image src="http://hn.people.com.cn/NMediaFile/2021/0813/LOCAL202108131105000300909080104.jpg"/>
+          <text class="index-list-text">
+            <view class="start-container" bindtap="go">
+              <text class="start">某地区2乡村情况</text>
+            </view>
+          </text>
+        </view>
+        <view class="index-list-item">
+        <image src="http://hn.people.com.cn/NMediaFile/2021/1203/LOCAL202112031548000496799931567.jpg"/>
+          <text class="index-list-text">
+            <view class="start-container" bindtap="go">
+              <text class="start">某地区2乡村情况</text>
+            </view>
+          </text>
+        </view>
+      </view>
+</view>

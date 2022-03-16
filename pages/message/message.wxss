@@ -1,0 +1,13 @@
+/* pages/message/message.wxss */
+
+.index-swiper{margin:10px;height:300rpx;border-radius:10rpx;overflow:hidden;margin-top:100rpx;}
+.index-swiper image{width:100%;border-radius:10rpx;overflow:hidden;}
+
+.index-tab{display:flex;}
+.index-tab view{flex:1;padding:10px;margin:10rpx;}
+.index-tab view.active{border-bottom:1px #147a2d solid;font-weight: bold;font-size: 20px;}
+
+.index-list{display:flex;flex-wrap:wrap;}
+.index-list-item{width:33%;}
+.index-list-item image{margin:0 auto;display:block;width:40%;height:110rpx;object-fit: cover;border-radius: 50%;}
+.index-list-text{width:90%;justify-content:space-between;padding-left:27px;font-size: 12px;}
