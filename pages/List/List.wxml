@@ -1,2 +1,18 @@
-<!--pages/List/List.wxml-->
-<text>pages/List/List.wxml</text>
+<view class="index">
+  <view style="font-size:21px;font-weight:700;margin-left:10px;">
+    <text >我的收藏</text>
+  </view>
+
+
+  <scroll-view class="index-list" scroll-y="{{true}}" bindscrolltolower="xiala">
+<block wx:for="{{acticle_list}}" catchtap="go">
+  <title_card img='{{item.image_src}}' title='{{item.title}}' isShowBtns='{{true}}' isLiked='{{item.liked}}'  bind:like='handleLike' isShowLike="{{true}}" id="{{index}}" >
+  </title_card>
+</block>
+</scroll-view>
+
+
+</view>
+
+
+

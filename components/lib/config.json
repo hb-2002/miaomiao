@@ -1,0 +1,9 @@
+{
+    "components": [
+        "card",
+        "wing-blank"
+    ],
+    "themes": {
+        "light": "white"
+    }
+}

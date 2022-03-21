@@ -1,0 +1,23 @@
+<view class="page">
+  <view style="width:100vw;height:5vw"></view>
+  
+  <!-- 选择器 -->
+  <view class="selector card">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{major}}">
+    <view class="picker">
+      {{index==0?'点击切换专业':'当前选择:'+major[index]}}
+    </view>
+  </picker>
+  </view>
+
+  <!-- 信息列表 -->
+  <view>
+    <!-- 卡片循环 -->
+    <block wx:for="{{users}}">
+      <info_card img="{{item.userPhoto}}" title="标题" price="{{item.major}}" type="类型" isShowDelete="{{true}}"> </info_card>
+    </block>
+
+
+  </view>
+
+</view>

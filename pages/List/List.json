@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "info_card":"../../components/wx-cards-master/card/card",
+    "title_card":"../../components/wx-cards-master/title-card/title-card"
+
+  }
 }

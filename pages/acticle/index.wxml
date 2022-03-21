@@ -1,0 +1,20 @@
+<!--pages/acticle/index.wxml-->
+<view>
+  
+  <!-- 标题 -->
+  <view class="title">
+    <text>{{acticle.title}}</text>
+  </view>
+
+  <!-- 图片 -->
+  <view class="big">
+    <image src="{{acticle.image_src}}"></image> 
+  </view>
+
+  <!-- 文章 -->
+  <view class="article">
+    <text>{{acticle.passage}}</text>
+    
+  </view>
+
+</view>

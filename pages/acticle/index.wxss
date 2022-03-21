@@ -1,0 +1,18 @@
+/* pages/acticle/index.wxss */
+.title{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around; 
+  font-size:70rpx;
+  font-weight: 600;
+}
+.big{
+  height: 400rpx;
+  overflow: hidden;
+}
+.article{
+  font:40rpx "microsoft yahei";
+  font-weight: 450;
+
+
+}

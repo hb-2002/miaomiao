@@ -1,12 +1,57 @@
 /* pages/index/index.wxss */
 
-.index-swiper{margin:10px;height:300rpx;border-radius:10rpx;overflow:hidden;}
-.index-swiper image{width:100%;border-radius:10rpx;overflow:hidden;}
+.index {
+  background-color: #EEEEef;
+  min-height: 100vh;
+  width:100vw
+}
 
-.index-tab{display:flex;}
-.index-tab view{padding:10px;margin:10rpx;}
-.index-tab view.active{border-bottom:1px #147a2d solid;font-weight: bold;font-size: 20px;}
+
+.index-swiper {
+  margin: 10px;
+  height: 300rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.index-swiper image {
+  width: 100%;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.index-tab {
+  display: flex;
+}
+
+.index-tab view {
+  padding: 10px;
+  margin: 10rpx;
+}
+
+.index-tab view.active {
+  border-bottom: 1px #147a2d solid;
+  font-weight: bold;
+  font-size: 20px;
+}
 
 /*.index-list{display:flex;flex-wrap:wrap;}*/
-.index-list-item{width:50%;}
-.index-list-item image{height:90rpx;}
+.index-list-item {
+  width: 50%;
+}
+
+
+.arctile-card{
+  background-color: #fff;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 15vw;
+  border-radius: 10px;
+  margin:10px;
+  margin-bottom: 5px;
+}
+
+/* .index-list-item image {
+  height: 90rpx;
+} */

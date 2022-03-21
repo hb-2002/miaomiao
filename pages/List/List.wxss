@@ -1,1 +1,5 @@
-/* pages/List/List.wxss */
+.index {
+  background-color: #EEEEef;
+  min-height: 100vh;
+  width:100vw
+}

@@ -1,32 +1,38 @@
 <!--pages/user/user.wxml-->
 <view class="user">
+<view style="height:6vw;width:100vw"> </view>
+
   <view class="user-info">
     <image src="{{userPhoto}}"/>
-    <text wx:if="{{logged}}">
-      青农欢迎您：{{nickName}}
-    </text>
-    <button wx:else disabled="{{disabled}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信登录</button>
+    <view wx:if="{{logged}}" class="name">
+      <text>{{nickName}}</text>
+    </view>
+    <button wx:else  open-type="getUserInfo" bindtap="bindGetUserInfo">微信登录</button>
   </view>
 
 <view wx:if="{{logged}}" class="user-list">
+  <navigator url="../list/list" open-type="navigate">
+    <view class="user-list-item">
+      <text>收藏列表</text>
+      <text class="iconfont icon-chevron-right"></text>
+    </view>
+  </navigator>
   <navigator url="../editUserInfo/editUserInfo" open-type="navigate">
-    <view class="user-list-item">
-      <text>编辑个人信息</text>
-      <text class="iconfont icon-chevron-right"></text>
-    </view>
-  </navigator>
-  <navigator url="../List/List" open-type="navigate">
-    <view class="user-list-item">
-      <text>查看列表</text>
-      <text class="iconfont icon-chevron-right"></text>
-    </view>
-  </navigator>
-  <navigator url="../detail/detail" open-type="navigate">
     <view class="user-list-item">
       <text>个人主页</text>
       <text class="iconfont icon-chevron-right"></text>
     </view>
   </navigator>
+  <block wx:if="{{userInfo.type=='负责人'}}">
+    <navigator url="../infoList/infoList" open-type="navigate">
+    <view class="user-list-item">
+      <text>学生信息</text>
+      <text class="iconfont icon-chevron-right"></text>
+    </view>
+  </navigator>
+  </block>
+  
+
 </view>
 
 </view>

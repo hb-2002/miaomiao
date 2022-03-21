@@ -1,4 +1,59 @@
 /* pages/editUserInfo/editUserInfo.wxss */
-.editUserInfo-list-item{margin-top: 40rpx;}
-.editUserInfo-list-item{height: 5rpx;border-bottom:1px #bfbfbf dashed; padding:10px;display:flex;align-items: center;justify-content: space-between;}
-.editUserInfo-list-tips{font-size:12px;color:red;}
+.editUserInfo-list-item {
+  margin-top: 40rpx;
+}
+
+.page{
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #EEEEef;
+}
+.card{
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 10vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding:10px;
+  margin-bottom: 5vw;
+}
+
+
+.editUserInfo-list-item {
+  height: 5rpx;
+  border-bottom: 1px #bfbfbf dashed;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editUserInfo-list-tips {
+  font-size: 12px;
+  color: red;
+}
+
+input {
+  /* border: 2rpx solid #ddd; */
+  border-bottom: 1rpx solid #ddd;
+}
+
+.label-1,
+.label-2 {
+  margin: 30rpx 0;
+  display: inline;
+  margin: 10px
+}
+
+.label-3-text {
+  color: #576B95;
+  font-size: 28rpx;
+}
+
+.checkbox-3 {
+  display: block;
+  margin: 30rpx 0;
+
+}

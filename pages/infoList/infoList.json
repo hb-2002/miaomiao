@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "title_card":"../../components/wx-cards-master/title-card/title-card",
+    "card":"../../components/wx-cards-master/card/card"
+  }
+}

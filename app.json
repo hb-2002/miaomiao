@@ -1,25 +1,26 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/near/near",
     "pages/message/message",
     "pages/user/user",
     "pages/editUserInfo/editUserInfo",
-    "pages/List/List",
-    "pages/detail/detail",
     "pages/editUserInfo/head/head",
     "pages/editUserInfo/name/name",
     "pages/editUserInfo/signature/signature",
     "pages/editUserInfo/location/location",
     "pages/editUserInfo/phone/phone",
-    "pages/editUserInfo/weixin/weixin"
+    "pages/editUserInfo/weixin/weixin",
+    "pages/acticle/index",
+    "pages/list/list",
+    "pages/infoList/infoList"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#147a2d",
     "navigationBarTitleText": "青农",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#bfbfbf",

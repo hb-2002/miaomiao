@@ -1,5 +1,5 @@
 <!--pages/editUserInfo/editUserInfo.wxml-->
-<view class="editUserInfo">
+<!-- <view class="editUserInfo">
   <navigator url="./head/head" open-type="navigate">
     <view class="editUserInfo-list-item">
       <text>修改头像</text>
@@ -36,4 +36,109 @@
       <text class="iconfont icon-chevron-right"></text>
     </view>
   </navigator>
+</view> -->
+
+<view class="page">
+
+  <view style="height:7vw;width:100vw;font-size:18px;font-weight:700;margin-bottom:10px;margin-left:10px">
+    个人主页
+  </view>
+
+  <view class="card">
+    <!-- 昵称 -->
+    <view style="display: flex;flex-direction:row;">
+      <view style="">昵称:</view>
+      <view style="margin-left:15px"><input value="{{userInfo.nickName?userInfo.nickName:''}}" bindinput="bindName"
+          placeholder="请输入昵称"></input></view>
+    </view>
+
+    <!-- 性别 -->
+    <view class="page-section page-section-gap" wx:if="{{userInfo.age?false:true}}">
+      <view class="page-section-title">性别</view>
+      <radio-group class="group" bindchange="radioChange">
+        <view class="label-2" wx:for="{{radioItems}}">
+          <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
+          <label class="label-2-text" for="{{item.name}}"><text>{{item.name}}</text></label>
+        </view>
+      </radio-group>
+    </view>
+    <view wx:if="{{userInfo.gender?true:false}}">
+      <view>性别：{{userInfo.gender}}</view>
+    </view>
+
+
+    <!-- 年龄 -->
+    <block wx:if="{{userInfo.age?false:true}}">
+
+      <view style="display: flex;flex-direction:row;">
+        <view style="">年龄: </view>
+        <view style="margin-left:15px"><input value="{{userInfo.age?userInfo.age:''}}" bindinput="bindAge"
+            placeholder="请输入年龄"></input></view>
+      </view>
+    </block>
+    <view wx:if="{{userInfo.age?true:false}}">
+      <view>年龄： {{userInfo.age}}</view>
+    </view>
+
+    <!-- 手机号 -->
+    <view style="display: flex;flex-direction:row;">
+      <view style="">手机号:</view>
+      <view style="margin-left:15px"><input value="{{userInfo.phone}}" bindblur="check" bindinput="bindPhone"
+          placeholder="请输入手机号"></input></view>
+    </view>
+
+
+  
+
+  <!-- 类型 -->
+  <block wx:if="{{userInfo.type?false:true}}">
+    <view class="section">
+      <view class="section__title">选择类型</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{types}}">
+        <view class="picker">
+          当前选择：{{types[index]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="section" wx:if="{{show}}">
+      <view class="section__title">选择专业</view>
+      <picker bindchange="bindPickerChange1" value="{{index}}" range="{{major}}">
+        <view class="picker">
+          当前选择：{{major[index1]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="section" wx:if="{{display}}">
+      <view class="section__title">选择负责地区</view>
+      <picker bindchange="bindPickerChange2" value="{{inde2}}" range="{{area}}">
+        <view class="picker">
+          当前选择：{{area[index2]}}
+        </view>
+      </picker>
+    </view>
+
+  </block>
+
+  <block wx:if="{{!userInfo.type?false:true}}">
+    <view>类型: {{userInfo.type}}</view>
+    <view wx:if="{{userInfo.major!='无'}}">专业: {{userInfo.type}}</view>
+    <view wx:if="UserInfo.area!=无">负责地区: {{userInfo.area}}</view>
+  </block>
+</view>
+  <!-- 简介 -->
+<view class="card">
+
+  <view>简介：</view>
+  <input value="{{userInfo.introduction?userInfo.introduction:''}}" bindinput="bindIntroduction"
+    placeholder="请输入简介"></input>
+
+</view>
+
+  <button type="primary"  bindtap="submit" style="margin-top:20px">提交</button>
+
+
+
+
 </view>

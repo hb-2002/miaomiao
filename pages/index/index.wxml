@@ -1,43 +1,32 @@
-<!--pages/index/index.wxml-->
+<view class="index" >
 
-<view class="index">
-  <swiper class="index-swiper" indicator-dots="{{true}}"
-        autoplay="{{true}}" circular="{{true}}">
-        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-          <swiper-item>
-            <image src="{{item}}" class="slide-image"/>
-          </swiper-item>
-        </block>
-      </swiper>
-      
-      <view class="index-tab">
-        <view class="active">文章报道</view>
-      </view>
+  <swiper class="index-swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}">
+    <block wx:for="{{acticle_list}}" wx:key="{{index}}" wx:if="{{index < 6}}">
+      <swiper-item bindtap="go" id="{{index}}">
+        <image src="{{item.image_src}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
 
-      <view class="index-list">
-        <view class="index-list-item">
-        <image src="http://hn.people.com.cn/NMediaFile/2021/1118/LOCAL202111181428000221651756742.jpg"/>
-          <text class="index-list-text">
-            <view class="start-container" bindtap="go">
-              <text class="start">某地区1乡村情况</text>
-            </view>
-          </text>
-        </view>
-        <view class="index-list-item">
-        <image src="http://hn.people.com.cn/NMediaFile/2021/0813/LOCAL202108131105000300909080104.jpg"/>
-          <text class="index-list-text">
-            <view class="start-container" bindtap="go">
-              <text class="start">某地区2乡村情况</text>
-            </view>
-          </text>
-        </view>
-        <view class="index-list-item">
-        <image src="http://hn.people.com.cn/NMediaFile/2021/1203/LOCAL202112031548000496799931567.jpg"/>
-          <text class="index-list-text">
-            <view class="start-container" bindtap="go">
-              <text class="start">某地区2乡村情况</text>
-            </view>
-          </text>
-        </view>
+  <view class="index-tab">
+    <view class="active">文章报道</view>
+  </view>
+
+  <view class="index-list" scroll-y="{{true}}" bindscrolltolower="xiala">
+
+    <block wx:for="{{acticle_list}}" catchtap="go">
+      <title_card img='{{item.image_src}}' title='{{item.title}}' isShowBtns='{{true}}' isLiked='{{item.liked}}'
+        bind:like='handleLike' isShowLike="{{true}}" id="{{index}}" >
+      </title_card>
+    </block>
+
+    <!-- <view style=" display: inline-flex;flex-direction:row;  justify-content:space-around;padding-top:10px">
+        <text>{{item.title}}</text>
       </view>
+      <view style="font-size:11px;color:#A9A9A9;  display: inline-flex;flex-direction:row-reverse;width:100%  ">
+        <view style="min-width:10px; padding-right:10px"><text>{{item.date}}</text></view>
+      </view> -->
+
+  </view>
+
 </view>
