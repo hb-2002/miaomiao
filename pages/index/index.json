@@ -1,7 +1,9 @@
 {
   "usingComponents": {
     "info_card":"../../components/wx-cards-master/card/card",
-    "title_card":"../../components/wx-cards-master/title-card/title-card"
+    "title_card":"../../components/wx-cards-master/title-card/title-card",
+    "wux-card": "../../components/lib/card/index",
+    "wux-wing-blank": "../../components/lib/wing-blank/index"
   },
   "enablePullDownRefresh":true,
   "onReachBottomDistance":30

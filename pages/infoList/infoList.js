@@ -8,6 +8,9 @@ Page({
    */
   data: {
     users:[],
+    major:[],
+    area:[],
+    type:'students', // 显示
     index:0,
     skip:0,
     limit:5
@@ -17,14 +20,30 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.Init()
+    this.Init(options)
   },
 
-  Init(){
-    this.loadSettings()
+  Init(options){
+    let type = options.type
+    switch (type) {
+      case 'students':this.loadSettings(this.loadUserInfo) 
+      break;
+      case 'areas':this.loadSettings(this.loadAreaInfo) 
+      break;
+    
+      default:
+        break;
+    }
+    this.setData({type:type})
   },
   
-  loadInfo(){
+  loadAreaInfo(){
+    
+  },
+
+
+
+  loadUserInfo(){
     let options = this.data.index==0?{type:'学生'}:{major:this.data.major[this.data.index],type:'学生'}
     wx.cloud.callFunction({
       name:"getUsers",
@@ -35,7 +54,8 @@ Page({
         options:options
       },
       success:(res)=>{
-        this.setData({users:res.result.data})
+
+        this.setData({users:this.data.users.concat(res.result.data),skip:this.data.users.length==res.result.data.length?this.data.skip:this.data.skip+5})
       },
       fail:(err)=>{
         console.log(err)
@@ -46,18 +66,18 @@ Page({
 
   },
 
-
-
-  loadSettings(){
+  loadSettings(loadInfo){
+    console.log(123)
     db.collection("Settings").doc('636050766236fd4c009c14dc717f91f7').get({
       success:(res)=>{
         console.log(res)
         let major = res.data.majors
         major = ['全部'].concat(major)
         this.setData({
-          major:major
+          major:major,
+          area:['全部'].concat(res.data.areas)
         })
-        this.loadInfo()
+        loadInfo()
       }
     })
   },
@@ -69,9 +89,10 @@ Page({
     this.setData({
       index:e.detail.value,
       skip:0,
-      limit:5
+      limit:5,
+      users:[]
     })
-    this.loadInfo()
+    this.loadUserInfo()
   },
   
   /**
@@ -113,7 +134,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.loadUserInfo()
   },
 
   /**

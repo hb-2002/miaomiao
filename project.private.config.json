@@ -51,6 +51,13 @@
         {
           "name": "pages/list/list",
           "pathName": "pages/list/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/infoList/infoList",
+          "query": "type=students",
           "scene": null
         }
       ]

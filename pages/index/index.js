@@ -73,7 +73,7 @@ Page({
       }
     }
     let acticle_list = this.data.acticle_list.concat(arcticles.result.data)
-    this.setData({ acticle_list:acticle_list, userInfo: userInfo ,skip:this.data.skip+5})
+    this.setData({ acticle_list:acticle_list, userInfo: userInfo ,skip:this.data.acticle_list.length==acticle_list.length?this.data.skip:this.data.skip+5})
   wx.hideLoading()
     return arcticles.result.data
 
@@ -154,6 +154,9 @@ Page({
    */
   onPullDownRefresh: function () {
 
+  },
+  call:function(e){
+    console.log(e)
   },
 
   /**

@@ -155,7 +155,7 @@ Page({
       name:userInfo.nickName?userInfo.nickName:'',
       age:userInfo.age?userInfo.age:'',
       introduction:userInfo.introduction?userInfo.introduction:'',
-      phone:userInfo.phone?userInfo.phone:''
+      phone:"+86" + userInfo.phone?userInfo.phone:''
     })
     console.log(userInfo)
   },

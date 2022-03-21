@@ -24,7 +24,7 @@
     </view>
   </navigator>
   <block wx:if="{{userInfo.type=='负责人'}}">
-    <navigator url="../infoList/infoList" open-type="navigate">
+    <navigator url="../infoList/infoList?type=students" open-type="navigate">
     <view class="user-list-item">
       <text>学生信息</text>
       <text class="iconfont icon-chevron-right"></text>
