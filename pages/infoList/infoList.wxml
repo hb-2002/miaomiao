@@ -1,14 +1,22 @@
 <view class="page">
   <view style="width:100vw;height:5vw"></view>
 
-  <!-- 选择器 -->
-  <view class="selector card">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{type=='students'?major:area}}">
+  <!-- 学生信息选择器 -->
+  <view class="selector card" wx:if="{{type=='students'}}">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{major}}">
       <view class="picker">
-        {{index==0?'点击切换选择':'当前选择:'+type=='students'?major[index]:area[index]}}
+        {{index==0?'点击切换选择':'当前选择:'+major[index]}}
       </view>
     </picker>
   </view>
+
+  <!-- 地区信息选择器 -->
+  <view wx:if="{{type=='areas'}}">
+    <view class="card" bindtap="Show"> {{show?'点击收起':'点击筛选'}}</view>
+    <wux-multi-picker-view wx:if="{{show}}" value="{{ value }}" options="{{ options }}" bind:valueChange="onValueChange" />
+
+  </view>
+
 
   <!-- 信息列表 -->
   <view class="list">
@@ -20,15 +28,24 @@
     <view wx:if="{{type=='students'}}">
       <block wx:for="{{users}}">
         <wux-wing-blank size="default">
-        <wux-card title="{{item.nickName}}" extra="{{item.major}}" thumb="{{item.userPhoto}}">
-          <view slot="body">{{item.introduction}}</view>
-          <view slot="footer">联系方式: {{item.phone}}</view>
-        </wux-card>
-      </wux-wing-blank>
-    </block>
+          <wux-card title="{{item.nickName}}" extra="{{item.major}}" thumb="{{item.userPhoto}}">
+            <view slot="body">{{item.introduction}}</view>
+            <view slot="footer">联系方式: {{item.phone}}</view>
+          </wux-card>
+        </wux-wing-blank>
+      </block>
     </view>
 
     <!-- 地区信息 -->
+    <view>
+      <block wx:for="{{articles}}" >
+        <title_card img='{{item.image_src}}' catchtap="go" title='{{item.title}}' isShowBtns='{{true}}' isLiked='{{item.liked}}' bind:like='handleLike' isShowLike="{{true}}" id="{{index}}">
+        </title_card>
+      </block>
+
+    </view>
+
+
 
   </view>
 

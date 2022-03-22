@@ -57,7 +57,7 @@
         {
           "name": "",
           "pathName": "pages/infoList/infoList",
-          "query": "type=students",
+          "query": "type=areas",
           "scene": null
         }
       ]

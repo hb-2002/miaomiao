@@ -19,6 +19,21 @@ Page({
 
   },
 
+  navtospecific :function(e){
+    let id =e.currentTarget.id
+    wx.navigateTo({
+      url: '../specific/index?type='+id,
+    })
+  },
+
+
+  search:function (e) {
+    console.log(e)
+    wx.reLaunch({
+      url: '../infoList/infoList?type=areas',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

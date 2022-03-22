@@ -1,0 +1,11 @@
+/* pages/specific/index.wxss */
+.page{
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #EEEEef;
+}
+.title{
+  font-size: 24px;
+  margin: 10px;
+  font-weight: 700;
+}

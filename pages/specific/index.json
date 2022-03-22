@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "title_card":"../../components/wx-cards-master/title-card/title-card"
+  },
+  "onReachBottomDistance":30
+
+}

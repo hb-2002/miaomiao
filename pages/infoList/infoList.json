@@ -1,10 +1,11 @@
 {
   "usingComponents": {
     "info_card":"../../components/wx-cards-master/title-card/title-card",
-    "card":"../../components/wx-cards-master/card/card",
     "wux-card": "../../components/lib/card/index",
-    "wux-wing-blank": "../../components/lib/wing-blank/index"
+    "wux-wing-blank": "../../components/lib/wing-blank/index",
+    "wux-multi-picker-view": "../../components/lib/multi-picker-view/index",
+    "title_card":"../../components/wx-cards-master/title-card/title-card"
+
   },
-  "enablePullDownRefresh":true,
   "onReachBottomDistance":30
 }

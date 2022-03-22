@@ -23,19 +23,20 @@ Component({
    */
   methods: {
     handleFocus(){
+      this.triggerEvent('search')
 
-      wx.getStorage({
-        key:"searchHistory",
-        success: (res)=> {
-          this.setData({
-            historyList:res.data
-          });
-        }
-      })
+      // wx.getStorage({
+      //   key:"searchHistory",
+      //   success: (res)=> {
+      //     this.setData({
+      //       historyList:res.data
+      //     });
+      //   }
+      // })
 
-      this.setData({
-        isFocus:true
-      });
+      // this.setData({
+      //   isFocus:true
+      // });
     },
     handleCancel(){
       this.setData({

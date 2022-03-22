@@ -1,6 +1,6 @@
 <!--pages/message/message.wxml-->
 
-<search />
+<search bind:search="search" />
 
 <view class="index">
   <swiper class="index-swiper" indicator-dots="{{true}}"
@@ -17,37 +17,37 @@
       </view>
 
       <view class="index-list">
-        <view class="index-list-item">
+        <view class="index-list-item" id="个人交通" bindtap="navtospecific">
           <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F03%2F06%2F24%2F5b31820bb6fea_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1647692198&t=990cee94643b45ee2dcb9488e08f8aab"/>
           <view class="index-list-text">
             <text>个人交通</text>
           </view>
         </view>
-        <view class="index-list-item">
+        <view class="index-list-item" id="人口结构" bindtap="navtospecific">
           <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg95.699pic.com%2Fxsj%2F1j%2Fqv%2Fjv.jpg%21%2Ffw%2F700%2Fwatermark%2Furl%2FL3hzai93YXRlcl9kZXRhaWwyLnBuZw%2Falign%2Fsoutheast&refer=http%3A%2F%2Fimg95.699pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1647694460&t=dbd2212729e6599cf290c36ec2543eff"/>
           <view class="index-list-text">
             <text>人口结构</text>
           </view>
         </view>
-        <view class="index-list-item">
+        <view class="index-list-item" id="当地特产" bindtap="navtospecific">
           <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F31%2F71%2F59c145f650383_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1647694710&t=179b1e5a3b2670f0bd4846de7d4d92bf"/>
           <view class="index-list-text">
             <text>当地特产</text>
           </view>
         </view>
-        <view class="index-list-item">
+        <view class="index-list-item" id="水电情况" bindtap="navtospecific">
           <image src="https://img1.baidu.com/it/u=995750353,2233697976&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=516"/>
           <view class="index-list-text">
             <text>水电情况</text>
           </view>
         </view>
-        <view class="index-list-item">
+        <view class="index-list-item" id="技术需求" bindtap="navtospecific">
           <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F64%2F77%2F59fcb24e631be_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1647694952&t=5926524971a785ec4cca832a3690f140"/>
           <view class="index-list-text">
             <text>技术需求</text>
           </view>
         </view>
-        <view class="index-list-item">
+        <view class="index-list-item" id="产品销售" bindtap="navtospecific">
           <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ftrademark-pics-search.oss-cn-shanghai.aliyuncs.com%2Fsmall%2Ft4519050936779776.jpg&refer=http%3A%2F%2Ftrademark-pics-search.oss-cn-shanghai.aliyuncs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1647694981&t=e2642e952ad04c0f891fe673e5137c8b"/>
           <view class="index-list-text">
             <text>产品销售</text>

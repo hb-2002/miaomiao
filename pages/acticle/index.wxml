@@ -1,5 +1,5 @@
 <!--pages/acticle/index.wxml-->
-<view>
+<view class="page">
   
   <!-- 标题 -->
   <view class="title">
@@ -8,7 +8,7 @@
 
   <!-- 图片 -->
   <view class="big">
-    <image src="{{acticle.image_src}}"></image> 
+    <image style="width: 100%;" src="{{acticle.image_src}}"></image> 
   </view>
 
   <!-- 文章 -->

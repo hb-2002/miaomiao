@@ -1,0 +1,15 @@
+<view class="page">
+  <view style="height: 5vw;"></view>
+
+  <view class="title">{{type}}</view>
+
+  <view>
+      <block wx:for="{{articles}}" >
+        <title_card img='{{item.image_src}}' catchtap="go" title='{{item.title}}' isShowBtns='{{true}}' isLiked='{{item.liked}}' bind:like='handleLike' isShowLike="{{true}}" id="{{index}}">
+        </title_card>
+      </block>
+
+    </view>
+
+
+</view>

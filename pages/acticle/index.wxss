@@ -9,10 +9,13 @@
 .big{
   height: 400rpx;
   overflow: hidden;
+  width: 100vw;
 }
 .article{
   font:40rpx "microsoft yahei";
   font-weight: 450;
-
-
+}
+.page{
+  width: 100vw;
+  min-height: 100vh;
 }
