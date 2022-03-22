@@ -118,6 +118,9 @@ Page({
           title: '上传成功',
           icon:'success'
         })
+      },
+      fail:(err)=>{
+        console.log(err)
       }
     })
     //提交数据库
@@ -147,9 +150,10 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: async function (options) {
     this.loadSettings()
-    let userInfo = app.globalData.userInfo
+    let userInfo = await db.collection("Users").get()
+    userInfo = userInfo.data[0]
     this.setData({
       userInfo:userInfo,
       name:userInfo.nickName?userInfo.nickName:'',

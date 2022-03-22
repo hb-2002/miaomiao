@@ -5,8 +5,8 @@
 
 
   <scroll-view class="index-list" scroll-y="{{true}}" bindscrolltolower="xiala">
-<block wx:for="{{acticle_list}}" catchtap="go">
-  <title_card img='{{item.image_src}}' title='{{item.title}}' isShowBtns='{{true}}' isLiked='{{item.liked}}'  bind:like='handleLike' isShowLike="{{true}}" id="{{index}}" >
+<block wx:for="{{acticle_list}}" >
+  <title_card img='{{item.image_src}}' catchtap="go" title='{{item.title}}' isShowBtns='{{true}}' isLiked='{{item.liked}}'  bind:like='handleLike' isShowLike="{{true}}" id="{{index}}" >
   </title_card>
 </block>
 </scroll-view>

@@ -1,6 +1,9 @@
 <!--pages/acticle/index.wxml-->
 <view class="page">
-  
+  <view style="height: 5vw;width: 100vw;"></view>
+
+
+
   <!-- 标题 -->
   <view class="title">
     <text>{{acticle.title}}</text>
@@ -8,13 +11,32 @@
 
   <!-- 图片 -->
   <view class="big">
-    <image style="width: 100%;" src="{{acticle.image_src}}"></image> 
+    <view class="photo">
+      <image style="width: 100%; height: 100%;border-radius: 10px;" src="{{acticle.image_src}}"></image>
+    </view>
   </view>
+
+  <view class="break"></view>
 
   <!-- 文章 -->
   <view class="article">
-    <text>{{acticle.passage}}</text>
-    
+    <view style="text-indent:2em;"> {{acticle.passage}}</view>
   </view>
+
+  <!-- 相关负责人 -->
+  <view class="related" wx:if="{{acticle.type=='area'}}">
+    <view style="margin-bottom: 12px;font-size: 40rpx;font-weight: 700;margin-left: 2vw;">相关负责人</view>
+
+    <view>
+      <wux-wing-blank size="default">
+          <wux-card title="{{related.nickName}}" extra="{{related.area}}" thumb="{{related.userPhoto}}">
+            <view slot="body">{{related.introduction}}</view>
+            <view slot="footer">联系方式: {{related.phone}}</view>
+          </wux-card>
+    </wux-wing-blank>
+    </view>
+  </view>
+
+
 
 </view>

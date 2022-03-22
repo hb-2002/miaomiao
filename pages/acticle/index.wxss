@@ -3,8 +3,9 @@
   display:flex;
   flex-direction: row;
   justify-content: space-around; 
-  font-size:70rpx;
+  font-size:50rpx;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 .big{
   height: 400rpx;
@@ -14,8 +15,34 @@
 .article{
   font:40rpx "microsoft yahei";
   font-weight: 450;
+  margin-top: 10px;
+}
+.photo{
+  height: 50vw;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  border-radius: 10px;
+}
+.related{
+  margin-top: 15px;
+  width: 100vw;
+  min-height: 10vw;
+}
+.break{
+  width: 100vw;
+  height: 3vw;
+  background-color: #fff;
 }
 .page{
   width: 100vw;
   min-height: 100vh;
+  background-color: #EEEEef;
+}
+.card{
+  display: flex;
+  min-height: 10px;
+  padding:10px;
+  background-color: #fff;
+
 }
